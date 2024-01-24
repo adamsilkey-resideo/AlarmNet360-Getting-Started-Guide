@@ -38,7 +38,7 @@ There are four primary flows for account creation, **PRO Series Panel** will be 
    
    Once you have all the required information, proceed to make the following request to create the account:
    
-   - **Endpoint:** Send a **POST** request to *'https://api.honeywell.com/AlarmNet360API/v1.2/Locations'* 
+   - **Endpoint:** Send a **POST** request to *'https://api.honeywellhome.com/AlarmNet360API/v1.2/Locations'* 
    
    - **Example Request Body:** Include the following parameters in the request body:
      
@@ -84,7 +84,7 @@ There are four primary flows for account creation, **PRO Series Panel** will be 
    
    Once you have all the required information, proceed to send the following request to create the account:
    
-   - **Endpoint:** Send a **POST** request to *'https://api.honeywell.com/AlarmNet360API/v1.2/Locations'*
+   - **Endpoint:** Send a **POST** request to *'https://api.honeywellhome.com/AlarmNet360API/v1.2/Locations'*
    
    - **Example Request Body:** Include the following parameters in the request body:
      
@@ -129,7 +129,7 @@ There are four primary flows for account creation, **PRO Series Panel** will be 
    
    To link an existing Security account with a new Total Connect account, you will need to set the *'LinkExistingTCAccount'* flag to *'false'*.
    
-   - **Endpoint:** Send a **POST** request to *'https://api.honeywell.com/AlarmNet360API/v1.2/Locations'*
+   - **Endpoint:** Send a **POST** request to *'https://api.honeywellhome.com/AlarmNet360API/v1.2/Locations'*
    
    - **Example Request Body:** Include the following parameters in the request body:
      
@@ -175,7 +175,7 @@ There are four primary flows for account creation, **PRO Series Panel** will be 
    
    To link an existing Security account with an existing Total Connect account, you will need to set the *'LinkExistingTCAccount'* flag to *'true'*.
    
-   - **Endpoint:** Send a **POST** request to *'https://api.honeywell.com/AlarmNet360API/v1.2/Locations'*
+   - **Endpoint:** Send a **POST** request to *'https://api.honeywellhome.com/AlarmNet360API/v1.2/Locations'*
    
    - **Example Request Body:** Include the following parameters in the request body:
      
@@ -233,13 +233,13 @@ To gather the necessary information for these panel types, follow the outlined s
 
 1. **Obtaining Panel ID and Panel Name:**
    
-   - **Process:** Send a GET request to the following endpoint: *'https://api.honeywell.com/AlarmNet360API/v1.2/PanelTypes'*
+   - **Process:** Send a GET request to the following endpoint: *'https://api.honeywellhome.com/AlarmNet360API/v1.2/PanelTypes'*
    
    - **Result:** The response will list various Panel IDs and Names. Select the ID and Name corresponding to your specific panel type.
 
 2. Obtaining Panel Revision: 
    
-   - **Process:** Send a GET request to the following endpoint: *'https://api.honeywell.com/AlarmNet360API/v1.2/PanelRevisions?panelId={PanelID}'*
+   - **Process:** Send a GET request to the following endpoint: *'https://api.honeywellhome.com/AlarmNet360API/v1.2/PanelRevisions?panelId={PanelID}'*
      
      *Note: Replace {PanelID} with the actual Panel ID obtained in the previous step.*
    
@@ -247,7 +247,7 @@ To gather the necessary information for these panel types, follow the outlined s
 
 3. Obtaining Panel Template: 
    
-   - **Process:** Send a GET request to the following endpoint: *'https://api.honeywell.com/AlarmNet360API/v1.2/panelId={{PanelID}}&panelRevisionId={{PanelRevisionID}}&countryCode=USA'*
+   - **Process:** Send a GET request to the following endpoint: *'https://api.honeywellhome.com/AlarmNet360API/v1.2/panelId={{PanelID}}&panelRevisionId={{PanelRevisionID}}&countryCode=USA'*
      
      *Note: Replace {PanelID} and {PanelRevisionID} with the appropriate Panel ID and Revision information previously obtained.*
    
@@ -274,7 +274,7 @@ Make sure you have an OAuth2 token before making a request. Follow the OAuth2 st
 - **Request:**
   
   ```
-  curl --location 'https://api.honeywell.com/AlarmNet360API/v1.2/panels/{deviceId}/users' 
+  curl --location 'https://api.honeywellhome.com/AlarmNet360API/v1.2/panels/{deviceId}/users' 
   
   --header 'Authorization: bearer {token}' 
   ```
@@ -305,7 +305,7 @@ Make sure you have an OAuth2 token before making a request. Follow the OAuth2 st
 - **Request:**
   
   ```
-  curl --location 'https://webdev2.alarmnet.com/AlarmNet360API/V1.2/panels/{deviceId}/keypads' 
+  curl --location 'https://api.honeywellhome.come/AlarmNet360API/V1.2/panels/{deviceId}/keypads' 
   --header 'Authorization: bearer {token}' 
   --header 'Content-Type: application/json' \ 
   --data '{ 
